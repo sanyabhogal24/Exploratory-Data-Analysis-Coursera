@@ -7,6 +7,7 @@ hpc_data_sub$datetime=paste(hpc_data_sub$Date,hpc_data_sub$Time)
 hpc_data_sub$datetime=strptime(hpc_data_sub$datetime,format="%Y-%m-%d %H:%M:%S")
 hpc_data_sub$Global_active_power=as.numeric(hpc_data_sub$Global_active_power)
 
+par("bg"="white")
 plot(hpc_data_sub$datetime,hpc_data_sub$Sub_metering_1,xlab="",ylab="Energy sub metering",type="l")
 lines(hpc_data_sub$datetime,hpc_data_sub$Sub_metering_2,col="red")
 lines(hpc_data_sub$datetime,hpc_data_sub$Sub_metering_3,col="blue")

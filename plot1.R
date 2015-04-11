@@ -7,6 +7,7 @@ hpc_data_sub$datetime=paste(hpc_data_sub$Date,hpc_data_sub$Time)
 hpc_data_sub$datetime=strptime(hpc_data_sub$datetime,format="%Y-%m-%d %H:%M:%S")
 hpc_data_sub$Global_active_power=as.numeric(hpc_data_sub$Global_active_power)
 
+par("bg"="white")
 hist(hpc_data_sub$Global_active_power,main="Global Active Power",xlab="Global active power (kilowatts)",ylab="Frequency",col="red")
 
 dev.copy(png,"plot1.png",height=480,width=480)
